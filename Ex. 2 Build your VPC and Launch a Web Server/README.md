@@ -2,9 +2,9 @@
 
 ## Author
 
-* **Name**: ________________________________
-* **Register Number**: _____________________
-* **Date of Submission**: __________________
+* **Name**: YASVANTH D
+* **Register Number**: 212223090031
+* **Date of Submission**: 26/02/26
 
 ---
 
@@ -87,31 +87,34 @@ Create a simple HTML page and verify that it can be accessed from a web browser 
 
 (Write the steps you followed in your own words)
 
-1. ---
-2. ---
-3. ---
-4. ---
-5. ---
+1. First, I created a VPC in Amazon Web Services. I gave it a CIDR block of 10.0.0.0/16. This VPC acts as my private network where all my resources will be created.
+2. Next, I created a public subnet inside the VPC with CIDR 10.0.1.0/24. I enabled auto-assign public IP so that any instance launched in this subnet will automatically get a public IP address.
+3. After that, I created an Internet Gateway and attached it to my VPC. This allows my VPC to communicate with the internet.
+4. Then, I created a route table and added a default route (0.0.0.0/0) pointing to the Internet Gateway. I associated this route table with my public subnet. This step ensures that traffic from my subnet can reach the internet.
+5. Next, I created a security group which acts as a virtual firewall. I allowed inbound traffic for SSH on port 22 and HTTP on port 80.
 
----
+
 
 ## Output Screenshots (Attach 3)
 
 ### Screenshot 1: VPC and Subnet Details
 
-(Insert Screenshot Here)
+<img width="1254" height="699" alt="image" src="https://github.com/user-attachments/assets/e7d94c2c-56dc-4e75-8d66-cc81b1beec8f" />
+
 
 ---
 
 ### Screenshot 2: EC2 Instance Running
 
-(Insert Screenshot Here)
+<img width="1261" height="561" alt="image" src="https://github.com/user-attachments/assets/20157bdf-3870-41b3-b94e-af5dae2af280" />
+
 
 ---
 
 ### Screenshot 3: Web Server Output in Browser
 
-(Insert Screenshot Here)
+<img width="1267" height="670" alt="image" src="https://github.com/user-attachments/assets/f119ba53-7f13-49ec-8a39-c0b890acb0cd" />
+
 
 ---
 
